@@ -14,11 +14,12 @@ import {HeaderComponent} from './header/header.component';
 import {SectionComponent} from './section/section.component';
 import {TimeDisplayComponent} from './section/time-display/time-display.component';
 import {ButtonsComponent} from './section/buttons/buttons.component';
+import {LayoutModule} from './layout/layout.module';
 
 const appRoutes: Routes = [
   {path: 'main', component: MainComponent},
   {path: 'side-books', component: SideBooksComponent}
-]
+];
 
 @NgModule({
   declarations: [
@@ -36,10 +37,12 @@ const appRoutes: Routes = [
     DialogModule,
     MainModule,
     SideBooksModule,
+    LayoutModule,
     RouterModule.forRoot(appRoutes,
       {
         // enableTracing: true
-      })
+      }),
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent],

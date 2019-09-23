@@ -5,7 +5,14 @@ import { TestComponent } from './test/test.component';
 
 
 @NgModule({
-  declarations: [TestComponent],
+  declarations: [
+    TestComponent
+  ],
+
+  exports: [
+    TestComponent
+  ],
+
   imports: [
     CommonModule
   ]
